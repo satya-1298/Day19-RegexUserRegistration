@@ -65,6 +65,20 @@ namespace UserRegistration
                 Console.WriteLine("Invalid Phone Number");
             }
         }
+        public void Password()
+        {
+            Console.WriteLine("Enter the Password");
+            string password = Console.ReadLine();
+            string pattern = "^[0-9A-Za-z@#$%&!]{8,}$";
+            if (Regex.IsMatch(password,pattern))
+            {
+                Console.WriteLine("Password is valid");
+            }
+            else
+            {
+                Console.WriteLine("Password should have minimum 8 Characters");
+            }
+        }
 
     }
 }
