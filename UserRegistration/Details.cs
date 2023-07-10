@@ -69,14 +69,17 @@ namespace UserRegistration
         {
             Console.WriteLine("Enter the Password");
             string password = Console.ReadLine();
-            string pattern = "^[0-9A-Za-z@#$%&!]{8,}$";
+            //Minimum 8 characters
+            //string pattern = "^[0-9A-Za-z@#$%&!]{8,}$";
+            //Should have atleast a Upper case
+            string pattern = "^[A-Z]{1}[0-9A-Za-z@#$%&!]{8,}$";
             if (Regex.IsMatch(password,pattern))
             {
                 Console.WriteLine("Password is valid");
             }
             else
             {
-                Console.WriteLine("Password should have minimum 8 Characters");
+                Console.WriteLine("Password is Invalid");
             }
         }
 
