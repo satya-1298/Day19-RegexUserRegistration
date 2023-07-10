@@ -72,7 +72,8 @@ namespace UserRegistration
             //Minimum 8 characters
             //string pattern = "^[0-9A-Za-z@#$%&!]{8,}$";
             //Should have atleast a Upper case
-            string pattern = "^[A-Z]{1}[0-9A-Za-z@#$%&!]{8,}$";
+            // string pattern = "^[A-Z]{1}[0-9A-Za-z@#$%&!]{8,}$";
+            string pattern = "^(?=.*?[A-Z])(?=.*?[0-9])[0-9A-Za-z@#$%&!]{8,}$";
             if (Regex.IsMatch(password,pattern))
             {
                 Console.WriteLine("Password is valid");
