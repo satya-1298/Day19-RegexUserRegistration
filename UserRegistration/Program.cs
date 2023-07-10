@@ -17,6 +17,7 @@ namespace UserRegistration
                 Console.WriteLine("*****************");
                 Console.WriteLine("1-Validate first name");
                 Console.WriteLine("2-Validating Last Name");
+                Console.WriteLine("3-Validate Email");
                 Console.WriteLine("*****************");
                 Console.WriteLine("Choose the Above options");
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -29,6 +30,10 @@ namespace UserRegistration
                         break;
                     case 2:
                         details.Last_NameValidate();
+                        Console.WriteLine("*****************");
+                        break;
+                    case 3:
+                        details.Email_Validate();
                         Console.WriteLine("*****************");
                         break;
                     default:

@@ -37,5 +37,20 @@ namespace UserRegistration
                 Console.WriteLine("Last Name is INVALID");
             }
         }
+        public void Email_Validate()
+        {
+            Console.WriteLine("Enter the e-Mail Address");
+            string address = Console.ReadLine();
+            string email = "^[A-Za-z0-9]+@[a-z]+[.][a-z]?";
+            if (Regex.IsMatch(address, email))
+            {
+                Console.WriteLine("Email is Vaild");
+            }
+            else
+            {
+                Console.WriteLine("Email is INVALID");
+            }
+        }
+
     }
 }
