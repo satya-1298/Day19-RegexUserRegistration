@@ -86,6 +86,19 @@ namespace UserRegistration
                 Console.WriteLine("Password is Invalid");
             }
         }
+        public void SampleTest(string email)
+        {
+            string  pattern = "^[0-9A-Za-z]+[.+_-]{0,1}[0-9A-Za-z]+[@][A-Za-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
+            if (Regex.IsMatch(email, pattern))
+            {
+                Console.WriteLine("email is valid");
+            }
+            else
+            {
+                Console.WriteLine("Email is Invalid");
+            }
+
+        }
 
     }
 }
