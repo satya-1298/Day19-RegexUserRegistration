@@ -73,7 +73,10 @@ namespace UserRegistration
             //string pattern = "^[0-9A-Za-z@#$%&!]{8,}$";
             //Should have atleast a Upper case
             // string pattern = "^[A-Z]{1}[0-9A-Za-z@#$%&!]{8,}$";
-            string pattern = "^(?=.*?[A-Z])(?=.*?[0-9])[0-9A-Za-z@#$%&!]{8,}$";
+            //should have a numeric
+            //string pattern = "^(?=.*?[A-Z])(?=.*?[0-9])[0-9A-Za-z@#$%&!]{8,}$";
+            //should have only one special character
+            string pattern = "^(?=[a-zA-Z0-9#@$?-_]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$";
             if (Regex.IsMatch(password,pattern))
             {
                 Console.WriteLine("Password is valid");
