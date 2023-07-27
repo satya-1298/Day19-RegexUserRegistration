@@ -28,23 +28,33 @@ namespace UserRegistration
                 {
 
                     case 1:
-                        details.FirstNameValidate();
+                        Console.WriteLine("Enter the First name");
+                        string name = Console.ReadLine();
+                        details.FirstNameValidate(name);
                         Console.WriteLine("*****************");
                         break;
                     case 2:
-                        details.Last_NameValidate();
+                        Console.WriteLine("Enter the last name");
+                        string lName = Console.ReadLine();
+                        details.Last_NameValidate(lName);
                         Console.WriteLine("*****************");
                         break;
                     case 3:
-                        details.Email_Validate();
+                        Console.WriteLine("Enter the e-Mail Address");
+                        string address = Console.ReadLine();
+                        details.Email_Validate(address);
                         Console.WriteLine("*****************");
                         break;
                     case 4:
-                        details.PhoneNumber();
+                        Console.WriteLine("Enter the mobile number");
+                        string phone = Console.ReadLine();
+                        details.PhoneNumber(phone);
                         Console.WriteLine("*****************");
                         break;
                     case 5:
-                        details.Password();
+                        Console.WriteLine("Enter the mobile number");
+                        string password = Console.ReadLine();
+                        details.Password(password);
                         Console.WriteLine("******************");
                         break;
                     case 6:
@@ -58,6 +68,10 @@ namespace UserRegistration
                         details.SampleTest("abc@gmail.com.com");
                         details.SampleTest("abc+100@gmail.com");
 
+                        break;
+                    case 7:
+                        Lambda_Validation lambda_Validation = new Lambda_Validation();
+                        lambda_Validation.FirstNameLambda_Validate();
                         break;
                     default:
                         Console.WriteLine("Invalid option");

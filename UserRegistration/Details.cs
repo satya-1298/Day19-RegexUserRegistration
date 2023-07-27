@@ -9,10 +9,9 @@ namespace UserRegistration
 {
     public class Details
     {
-        public void FirstNameValidate()
+        public string FirstNameValidate(string name)
         {
-            Console.WriteLine("Enter the First name ");
-            string name = Console.ReadLine();
+           
             string firstname = "^[A-Z]{1}[a-z]{3,}?";
             if (Regex.IsMatch(name, firstname))
             {
@@ -22,11 +21,11 @@ namespace UserRegistration
             {
                 Console.WriteLine("First Name is INVALID");
             }
+            return name;
         }
-        public void Last_NameValidate()
+        public string Last_NameValidate(string name)
         {
-            Console.WriteLine("Enter the last name");
-            string name = Console.ReadLine();
+           
             string lastname = "^[A-Z]{1}[a-z]{3,}?";
             if (Regex.IsMatch(name, lastname))
             {
@@ -36,11 +35,11 @@ namespace UserRegistration
             {
                 Console.WriteLine("Last Name is INVALID");
             }
+            return name;
         }
-        public void Email_Validate()
+        public string Email_Validate(string address)
         {
-            Console.WriteLine("Enter the e-Mail Address");
-            string address = Console.ReadLine();
+           
             string email = "^[A-Za-z0-9]+@[a-z]+[.][a-z]?";
             if (Regex.IsMatch(address, email))
             {
@@ -50,12 +49,12 @@ namespace UserRegistration
             {
                 Console.WriteLine("Email is INVALID");
             }
+            return email;
         }
-        public void PhoneNumber()
+        public string PhoneNumber(string phone)
         {
-            Console.WriteLine("Enter the mobile number");
-            string phone = Console.ReadLine();
-            string number = "^[0-9]{2}[ ][7-9]{1}[0-9]{9}$";
+           
+            string number = "^[1-9]{2}( )[7-9]{1}[0-9]{9}$";
             if (Regex.IsMatch(phone, number))
             {
                 Console.WriteLine("Phone Number is valid");
@@ -64,11 +63,11 @@ namespace UserRegistration
             {
                 Console.WriteLine("Invalid Phone Number");
             }
+            return number;
         }
-        public void Password()
+        public string Password(string password)
         {
-            Console.WriteLine("Enter the Password");
-            string password = Console.ReadLine();
+           
             //Minimum 8 characters
             //string pattern = "^[0-9A-Za-z@#$%&!]{8,}$";
             //Should have atleast a Upper case
@@ -85,6 +84,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("Password is Invalid");
             }
+            return password;
         }
         public void SampleTest(string email)
         {
