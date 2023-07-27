@@ -97,7 +97,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("Email is Invalid");
             }
-            return pattern;
+            return email;
         }
 
     }

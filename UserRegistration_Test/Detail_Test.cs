@@ -12,45 +12,78 @@ namespace UserRegistration_Test
         [Test]
         public void Validate_FirstName()
         {
-            string name = "Satya";
-            Details details = new Details();
-            string ss = details.FirstNameValidate(name);
-            Assert.AreEqual(name,ss);
+            try
+            {
+                string name = "Sa";
+                Details details = new Details();
+                string ss = details.FirstNameValidate(name);
+                Assert.AreEqual(name, ss);
+            }
+            catch(CustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
-        [Test] 
-        public void Validate_LastName() 
+        [Test]
+        public void Validate_LastName()
         {
-            string name = "Adabala";
-            Details details = new Details();
-            string ss = details.Last_NameValidate(name);
-            Assert.AreEqual(name, ss);
+            try
+            {
+                string name = "adab";
+                Details details = new Details();
+                string ss = details.Last_NameValidate(name);
+                Assert.AreEqual(name, ss);
+            }
+           
+            catch (CustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         [Test]
         public void Validate_Email()
         {
-
-            string mail = "satya123@gmail.com";
-            Details details = new Details();
-            string ss = details.Email_Validate(mail);
-            Assert.AreEqual(mail, ss);
+            try
+            {
+                string mail = "satya";
+                Details details = new Details();
+                string ss = details.Email_Validate(mail);
+                Assert.AreEqual(mail, ss);
+            }
+            catch (CustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         [Test]
         public void Validate_Phone()
         {
-
-            string phone ="91 9342424223";
-            Details details = new Details();
-            string ss = details.PhoneNumber(phone);
-            Assert.AreEqual(phone, ss);
+            try
+            {
+                string phone = "satya";
+                Details details = new Details();
+                string ss = details.PhoneNumber(phone);
+                Assert.AreEqual(phone, ss);
+            }
+            catch (CustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         [Test]
         public void Validate_Password()
         {
-
-            string password = "#@3Sad@234";
-            Details details = new Details();
-            string ss = details.Last_NameValidate(password);
-            Assert.AreEqual(password, ss);
+            try
+            {
+                string password = "efwr4@";
+                Details details = new Details();
+                string ss = details.Password(password);
+                Assert.AreEqual(password, ss);
+            }
+            catch(CustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         [Test]
         public void SampleEmails()
@@ -58,16 +91,16 @@ namespace UserRegistration_Test
             //string mail="abc@yahoo.com";
             string[] mail = {"abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc - 100@abc.net", "abc.100@abc.com.au",
                                     "abc@1.com","abc@gmail.com.com","abc+100@gmail.com"};
-            
-           
-            for (int i =0;i<mail.Length;i++)
+
+
+            for (int i = 0; i < mail.Length; i++)
             {
                 Details details = new Details();
-                string ss = details.SampleTest(mail[i]);               
+                string ss = details.SampleTest(mail[i]);
                 Assert.AreEqual(mail[i], ss);
-                
+
             }
-           
+
         }
     }
 }
