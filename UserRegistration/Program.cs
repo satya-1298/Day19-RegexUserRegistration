@@ -69,10 +69,7 @@ namespace UserRegistration
                         details.SampleTest("abc+100@gmail.com");
 
                         break;
-                    case 7:
-                        Lambda_Validation lambda_Validation = new Lambda_Validation();
-                        lambda_Validation.FirstNameLambda_Validate();
-                        break;
+                   
                     default:
                         Console.WriteLine("Invalid option");
                         break;

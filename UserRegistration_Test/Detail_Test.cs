@@ -52,5 +52,22 @@ namespace UserRegistration_Test
             string ss = details.Last_NameValidate(password);
             Assert.AreEqual(password, ss);
         }
+        [Test]
+        public void SampleEmails()
+        {
+            //string mail="abc@yahoo.com";
+            string[] mail = {"abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc - 100@abc.net", "abc.100@abc.com.au",
+                                    "abc@1.com","abc@gmail.com.com","abc+100@gmail.com"};
+            
+           
+            for (int i =0;i<mail.Length;i++)
+            {
+                Details details = new Details();
+                string ss = details.SampleTest(mail[i]);               
+                Assert.AreEqual(mail[i], ss);
+                
+            }
+           
+        }
     }
 }
